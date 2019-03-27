@@ -23,7 +23,7 @@ Conversely, it can also be used to activate a special character like a tab:
 
 The problem is that the backslash also has special meanings in regular
 expressions.
-So, if we compose a string that we want to be used to desribe a regular
+So, if we compose a string that we want to be used to describe a regular
 expression pattern, we have to think 2 steps ahead: (1) How will Python
 interpret this string, and then (2) pass it along to a regular expression
 function or argument.
@@ -78,6 +78,16 @@ will cause the regex object to be case-insensitive when it looks for matches in
 the target string.
 
 Others flags include:
+<dl>
+    <dt>`re.IGNORECASE`</dt>
+    <dd>Perform case-insensitive matching.</dd>
+    <dt>`re.MULTILINE`</dt>
+    <dd>Allow `'^'` to match at the beginning of the string and at the
+    beginning of each line.  Allow `'$'` to match at the end of the string and
+    at the end of each line.</dd>
+    <dt>`re.DOTALL`</dt>
+    <dd>Make `'.'` match any character, including a newline character.</dd>
+</dl>
 
 
 # Regex object methods
@@ -94,6 +104,28 @@ Others flags include:
     list of the matches that were found.</dd>
     <dt>`re_object.finditer(target_str)`</dt>
     <dd>Similar to `findall`, but returns an iterator yielding match objects.</dd>
+</dl>
+
+# Character classes
+
+<dl>
+    <dt>`\d`</dt>
+    <dd>Any digit; equivalent to character set `[0-9]`.</dd>
+    <dt>`\D`</dt>
+    <dd>Any nondigit; `[^0-9]`.</dd>
+    <dt>`\s`</dt>
+    <dd>Any whitespace character `[ \t\n\r\f\v]`.</dd>
+    <dt>`\S`</dt>
+    <dd>Any nonwhitespace character `[^ \t\n\r\f\v]`.</dd>
+    <dt>`\w`</dt>
+    <dd>Any alphanumeric character `[a-zA-Z0-9_]`.</dd>
+    <dt>`\W`</dt>
+    <dd>Any non-alphanumeric character `[^a-zA-Z0-9_]`.</dd>
+    <dt>`\b`</dt>
+    <dd>Match at the boundary between a word and nonword character.</dd>
+    <dt>`\B`</dt>
+    <dd>Match anywhere *except* at the boundary between a word and nonword
+    character.</dd>
 </dl>
 
 
