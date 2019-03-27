@@ -6,6 +6,7 @@ patterns).
 Other than that, the syntax for how we describe the pattern we want to find is
 very similar.
 
+
 # A note about backslashes and raw strings
 
 tl;dr always use raw strings when writing regex patterns in Python.
@@ -45,6 +46,24 @@ pattern in Python, we will always use **raw** strings.
 
 
 # Using the `re` module
+
+1.  Write a wrong string for your regex pattern
+
+        >>> dna_pattern_str = r'[ACGT]+'
+
+2.  Create a regex object from your pattern
+
+        >>> dna_pattern = re.compile(dna_pattern_str)
+
+3.  Use the object's methods to search target strings
+
+        >>> dna_pattern.search('Drosophila\tACCCTGGCTTCAATGTC\n')
+
+
+# Arguments that can be passed to `re.compile` method
+
+
+# Regex object methods
 
 
 # Acknowledgments
