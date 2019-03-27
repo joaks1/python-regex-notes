@@ -47,6 +47,13 @@ pattern in Python, we will always use **raw** strings.
 
 # Using the `re` module
 
+Python has a really nice module for dealing with regular expressions; all we
+have to do is import it:
+
+    >>> import re
+
+Using the `re` module generally follows three steps:
+
 1.  Write a wrong string for your regex pattern
 
         >>> dna_pattern_str = r'[ACGT]+'
@@ -55,15 +62,39 @@ pattern in Python, we will always use **raw** strings.
 
         >>> dna_pattern = re.compile(dna_pattern_str)
 
-3.  Use the object's methods to search target strings
+3.  Use one of the object's methods (it has several) to search target strings
 
-        >>> dna_pattern.search('Drosophila\tACCCTGGCTTCAATGTC\n')
+        >>> match_object = dna_pattern.search('Drosophila\tACCCTGGCTTCAATGTC\n')
 
 
 # Arguments that can be passed to `re.compile` method
 
+There are several flags accepted by the `compile` method that allow you to
+adjust how the regex pattern behaves. For example:
+
+        >>> dna_pattern = re.compile(dna_pattern_str, re.IGNORECASE)
+
+will cause the regex object to be case-insensitive when it looks for matches in
+the target string.
+
+Others flags include:
+
 
 # Regex object methods
+
+<dl>
+    <dt>`re_object.match(target_str)`</dt>
+    <dd>Look for a match only at the beginning of the target string. Returns a
+    match object if found, None if not.</dd>
+    <dt>`re_object.search(target_str)`</dt>
+    <dd>Look for the first match anywhere in the target string. Returns a match
+    object if found, None if not.</dd>
+    <dt>`re_object.findall(target_str)`</dt>
+    <dd>Look for all non-overlapping matches in the target string. Returns a
+    list of the matches that were found.</dd>
+    <dt>`re_object.finditer(target_str)`</dt>
+    <dd>Similar to `findall`, but returns an iterator yielding match objects.</dd>
+</dl>
 
 
 # Acknowledgments
