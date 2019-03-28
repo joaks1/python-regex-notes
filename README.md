@@ -79,14 +79,15 @@ the target string.
 
 Others flags include:
 <dl>
-    <dt>`re.IGNORECASE`</dt>
+    <dt><code>re.IGNORECASE</code></dt>
     <dd>Perform case-insensitive matching.</dd>
-    <dt>`re.MULTILINE`</dt>
-    <dd>Allow `'^'` to match at the beginning of the string and at the
-    beginning of each line.  Allow `'$'` to match at the end of the string and
-    at the end of each line.</dd>
-    <dt>`re.DOTALL`</dt>
-    <dd>Make `'.'` match any character, including a newline character.</dd>
+    <dt><code>re.MULTILINE</code></dt>
+    <dd>Allow <code>'^'</code> to match at the beginning of the string and at
+    the beginning of each line.  Allow <code>'$'</code> to match at the end of
+    the string and at the end of each line.</dd>
+    <dt><code>re.DOTALL</code></dt>
+    <dd>Make <code>'.'</code> match any character, including a newline
+    character.</dd>
 </dl>
 
 
