@@ -94,37 +94,37 @@ Others flags include:
 # Regex object methods
 
 <dl>
-    <dt>`re_object.match(target_str)`</dt>
+    <dt><code>re_object.match(target_str)</code></dt>
     <dd>Look for a match only at the beginning of the target string. Returns a
     match object if found, None if not.</dd>
-    <dt>`re_object.search(target_str)`</dt>
+    <dt><code>re_object.search(target_str)</code></dt>
     <dd>Look for the first match anywhere in the target string. Returns a match
     object if found, None if not.</dd>
-    <dt>`re_object.findall(target_str)`</dt>
+    <dt><code>re_object.findall(target_str)</code></dt>
     <dd>Look for all non-overlapping matches in the target string. Returns a
     list of the matches that were found.</dd>
-    <dt>`re_object.finditer(target_str)`</dt>
-    <dd>Similar to `findall`, but returns an iterator yielding match objects.</dd>
+    <dt><code>re_object.finditer(target_str)</code></dt>
+    <dd>Similar to <code>findall</code>, but returns an iterator yielding match objects.</dd>
 </dl>
 
 # Character classes
 
 <dl>
-    <dt>`\d`</dt>
-    <dd>Any digit; equivalent to character set `[0-9]`.</dd>
-    <dt>`\D`</dt>
-    <dd>Any nondigit; `[^0-9]`.</dd>
-    <dt>`\s`</dt>
-    <dd>Any whitespace character `[ \t\n\r\f\v]`.</dd>
-    <dt>`\S`</dt>
-    <dd>Any nonwhitespace character `[^ \t\n\r\f\v]`.</dd>
-    <dt>`\w`</dt>
-    <dd>Any alphanumeric character `[a-zA-Z0-9_]`.</dd>
-    <dt>`\W`</dt>
-    <dd>Any non-alphanumeric character `[^a-zA-Z0-9_]`.</dd>
-    <dt>`\b`</dt>
+    <dt><code>\d</code></dt>
+    <dd>Any digit; equivalent to character set <code>[0-9]</code>.</dd>
+    <dt><code>\D</code></dt>
+    <dd>Any nondigit; <code>[^0-9]</code>.</dd>
+    <dt><code>\s</code></dt>
+    <dd>Any whitespace character <code>[ \t\n\r\f\v]</code>.</dd>
+    <dt><code>\S</code></dt>
+    <dd>Any nonwhitespace character <code>[^ \t\n\r\f\v]</code>.</dd>
+    <dt><code>\w</code></dt>
+    <dd>Any alphanumeric character <code>[a-zA-Z0-9_]</code>.</dd>
+    <dt><code>\W</code></dt>
+    <dd>Any non-alphanumeric character <code>[^a-zA-Z0-9_]</code>.</dd>
+    <dt><code>\b</code></dt>
     <dd>Match at the boundary between a word and nonword character.</dd>
-    <dt>`\B`</dt>
+    <dt><code>\B</code></dt>
     <dd>Match anywhere *except* at the boundary between a word and nonword
     character.</dd>
 </dl>
