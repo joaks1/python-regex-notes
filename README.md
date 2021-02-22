@@ -54,7 +54,7 @@ have to do is import it:
 
 Using the `re` module generally follows three steps:
 
-1.  Write a wrong string for your regex pattern
+1.  Write a raw string for your regex pattern
 
         >>> dna_pattern_str = r'[ACGT]+'
 
@@ -125,8 +125,35 @@ Others flags include:
     <dt><code>\b</code></dt>
     <dd>Match at the boundary between a word and nonword character.</dd>
     <dt><code>\B</code></dt>
-    <dd>Match anywhere *except* at the boundary between a word and nonword
+    <dd>Match anywhere <b>except</b> at the boundary between a word and nonword
     character.</dd>
+    <dt><code>[...]</code></dt>
+    <dd>Syntax for creating your own character class. Match any character in
+    the brackets; you replace <code>...</code> with the characters.</dd>
+    <dt><code>[^...]</code></dt>
+    <dd>Match any character <b>NOT</b> in the brackets; you replace
+    <code>...</code> with the characters.</dd>
+</dl>
+
+# Special characters/syntax
+
+<dl>
+    <dt><code>^</code></dt>
+    <dd>Matches the beginning of the string.</dd>
+    <dt><code>$</code></dt>
+    <dd>Matches the end of the string.</dd>
+    <dt><code>.</code></dt>
+    <dd>Matches any character, except a newline.</dd>
+    <dt><code>*</code></dt>
+    <dd>Match the preceding character(s) zero or more times.</dd>
+    <dt><code>+</code></dt>
+    <dd>Match the preceding character(s) one or more times.</dd>
+    <dt><code>?</code></dt>
+    <dd>Match the preceding character(s) zero or one time.</dd>
+    <dt><code>{m}</code></dt>
+    <dd>Match the preceding character(s) when it's repeated exactly <code>m</times>.</dd>
+    <dt><code>{m,n}</code></dt>
+    <dd>Match the preceding character(s) when it's repeated <code>m</times> to <code>n</code> times.</dd>
 </dl>
 
 
