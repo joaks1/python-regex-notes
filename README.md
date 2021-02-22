@@ -151,7 +151,7 @@ Others flags include:
     <dt><code>?</code></dt>
     <dd>Match the preceding character(s) zero or one time.</dd>
     <dt><code>{m}</code></dt>
-    <dd>Match the preceding character(s) when it's repeated exactly <code>m</code> times>.</dd>
+    <dd>Match the preceding character(s) when it's repeated exactly <code>m</code> times.</dd>
     <dt><code>{m,n}</code></dt>
     <dd>Match the preceding character(s) when it's repeated <code>m</code> to <code>n</code> times.</dd>
 </dl>
