@@ -171,6 +171,32 @@ Others flags include:
 </dl>
 
 
+# An example
+
+Let's play with a simple example
+
+```python
+>>> sentence = "For years, a reformist searched for forests."
+>>> for_pattern_str = r'for'
+>>> for_pattern = re.compile(for_pattern_str)
+>>> for_pattern.findall(sentence)
+['for', 'for', 'for']
+```
+
+We missed the first "For", why?
+
+```python
+>>> for_pattern_str = r'[Ff]or'
+>>> for_pattern = re.compile(for_pattern_str)
+>>> for_pattern.findall(sentence)
+['For', 'for', 'for', 'for']
+```
+
+What if we only want to find "for" at the beginning of a larger word?
+
+What if we only want to find "for" as part of a larger word but not at the beginning or end?
+
+
 # Acknowledgments
 
 ## Support
