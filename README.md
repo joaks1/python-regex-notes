@@ -1,5 +1,17 @@
-Using regular expressions (regex) in Python is very similar to how we have been
-using them in Bash.
+# Intro to regular expression
+
+Regular expression (often shortened as regex) refers to a language for
+describing patterns of strings of chararacters.
+Regulare expressions are supported in most programming languages and used in
+popular text-processing tools, like `sed`, `grep`, and `awk`.
+The core regex language for expressing character patterns is largely shared
+across different implementations, but there are variations of syntax.
+
+
+# Comparing using regex in Python vs Bash
+
+Using regular expressions (regex) in Python is very similar to how we use them
+in Bash via system tools like `grep` and `sed`.
 The main difference is that we will be creating and using regex-crunching
 objects (instances of a class designed for dealing with regular expression
 patterns).
@@ -62,7 +74,8 @@ Using the `re` module generally follows three steps:
 
         >>> dna_pattern = re.compile(dna_pattern_str)
 
-3.  Use one of the object's methods (it has several) to search target strings
+3.  Use one of the object's methods (it has several, like `match`, `search`,
+    and `findall`) to search target strings
 
         >>> match_object = dna_pattern.search('Drosophila\tACCCTGGCTTCAATGTC\n')
 
@@ -72,7 +85,7 @@ Using the `re` module generally follows three steps:
 There are several flags accepted by the `compile` method that allow you to
 adjust how the regex pattern behaves. For example:
 
-        >>> dna_pattern = re.compile(dna_pattern_str, re.IGNORECASE)
+    >>> dna_pattern = re.compile(dna_pattern_str, re.IGNORECASE)
 
 will cause the regex object to be case-insensitive when it looks for matches in
 the target string.
@@ -106,6 +119,7 @@ Others flags include:
     <dt><code>re_object.finditer(target_str)</code></dt>
     <dd>Similar to <code>findall</code>, but returns an iterator yielding match objects.</dd>
 </dl>
+
 
 # Character classes
 
