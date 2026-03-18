@@ -192,9 +192,10 @@ We missed the first "For", why?
 ['For', 'for', 'for', 'for']
 ```
 
-What if we only want to find "for" at the beginning of a larger word?
+What if we only want to find "for" or "For" at the beginning of a larger word?
 
-What if we only want to find "for" as part of a larger word but not at the beginning or end?
+What if we only want to find "for" as part of a larger word but not at the
+beginning or end?
 
 
 # Acknowledgments
